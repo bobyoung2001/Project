@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/layui/css/layui.css">
+<script src="/layui/layui.js"></script>
+<script src="/jquery-3.4.1/jquery-3.4.1.js">
+    <script src="/layer/layer.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="body">
+
+    <div class="layui-row">
+        <div class="layui-col-md6">
+            <div class="layui-collapse">
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">我是安卓用户</h2>
+                    <a class="layui-colla-content  layui-show" id="ad1" style="background-color: #fffdfe" href="javascript:void(0)">下载安卓SSR</a>
+                    <a class="layui-colla-content  layui-show" id="ad2" style="background-color: #fffdfe" href="javascript:void(0)">站外下载地址</a>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">我是苹果用户</h2>
+                    <a class="layui-colla-content" id="app1" style="background-color: #fffdfe" href="javascript:void(0)">获取苹果ID下载</a>
+                    <a class="layui-colla-content" id="app2" style="background-color: #fffdfe" href="javascript:void(0)">SSR iPA下载</a>
+                    <a class="layui-colla-content" id="app3" style="background-color: #fffdfe" href="javascript:void(0)">在线下载</a>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">我是PC（电脑）用户</h2>
+                    <a class="layui-colla-content" id="pc1" style="background-color: #fffdfe" href="javascript:void(0)">下载PC SSR软件</a>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title" >以上都不是</h2>
+                    <a class="layui-colla-content" id="no" style="background-color: #fffdfe" href="javascript:void(0)">其它选项</a>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6" id="adpage">
+            <div class="layui-card">
+                <div class="layui-card-header">下载安卓SSR</div>
+                <div class="layui-card-body">
+                    <textarea  style="font-family: 'Adobe Devanagari'; font-size: 30px; height: 200px;resize: none;width: 550px;border: none;word-wrap:break-word" th:text="'本站仅提供SSR的文件下载，文件来源于互联网，任何版权问题跟我没有屁关系'" disabled>
+                    </textarea>
+                </div>
+                <!--<div style="text-align: center">
+                    <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" download="">下载</a>
+                </div>-->
+                <ul class="layui-timeline">
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">ShadowsocksR 3.5.4.apk</h3>
+                            <p>
+                                目前为止安卓的最新版本，推荐下载此版本
+                                <br>
+                            </p>
+                            <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" download="">下载</a>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">官网下载</h3>
+                            <p>
+                                安卓SSR的Github托管项目，为官方原版
+                            </p>
+                            <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" href="https://github.com/shadowsocksrr/shadowsocksr-android/releases" target="_blank">官网下载</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="layui-col-md6" id="extra" style="display: none">
+            <div class="layui-card">
+                <div class="layui-card-header">站外下载地址</div>
+                <div class="layui-card-body">
+                    <textarea id="demo" style="font-family: 'Adobe Devanagari'; font-size: 30px; height: 200px;resize: none;width: 550px;border: none;word-wrap:break-word" th:text="'本站仅提供SSR的文件下载，文件来源于互联网，任何版权问题跟我没有屁关系'" disabled>
+                    </textarea>
+                </div>
+                <!--<div style="text-align: center">
+                    <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" download="">下载</a>
+                </div>-->
+                <ul class="layui-timeline">
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">站外下载</h3>
+                            <p>
+                                不保证安全性及可用性
+                                <br>
+                            </p>
+                            <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" href="http://www.3h3.com/az/200822.html" target="_blank" download="">下载</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="layui-col-md6" id="idpage" style="display: none">
+            <div class="layui-card">
+                <div class="layui-card-header">获取苹果ID下载</div>
+                <div class="layui-card-body">
+                    <textarea style="font-family: 'Adobe Devanagari'; font-size: 30px; height: 200px;resize: none;width: 550px;border: none;word-wrap:break-word" th:text="'本站仅提供SSR的文件下载，文件来源于互联网，任何版权问题跟我没有屁关系'" disabled>
+                    </textarea>
+                </div>
+                <!--<div style="text-align: center">
+                    <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" download="">下载</a>
+                </div>-->
+                <ul class="layui-timeline">
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">美区苹果ID</h3>
+                            <p>
+                                切勿登录设置中的iCloud，只登陆APPSTORE下载
+                                <br>
+                                ID:i-minos@aneeo.cc
+                            </p>
+                            密码：
+                            <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="getpassword1">获取密码</a>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">美区苹果ID2</h3>
+                            <p>
+                                切勿登录设置中的iCloud，只登陆APPSTORE下载
+                                <br>
+                                ID:i-prometheus@aneeo.cc
+                            </p>
+                            密码：
+                            <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="getpassword2">获取密码</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="layui-col-md6" id="iPapage" style="display: none">
+            <div class="layui-card">
+                <div class="layui-card-header">SSR iPA下载</div>
+                <div class="layui-card-body">
+                    <textarea style="font-family: 'Adobe Devanagari'; font-size: 30px; height: 200px;resize: none;width: 550px;border: none;word-wrap:break-word" th:text="'本站仅提供SSR的文件下载，文件来源于互联网，任何版权问题跟我没有屁关系'" disabled>
+                    </textarea>
+                </div>
+                <!--<div style="text-align: center">
+                    <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" download="">下载</a>
+                </div>-->
+                <ul class="layui-timeline">
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">SSR-2.1.11 iPA下载</h3>
+                            <p>
+                                下载后需签名安装，自行研究
+                            </p>
+                            <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" href="/Source/Shadowrocket-2.1.11.ipa" download="Shadowrocket-2.1.11.ipa">点击下载</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="layui-col-md6" id="installpage" style="display: none">
+            <div class="layui-card">
+                <div class="layui-card-header">在线安装</div>
+                <div class="layui-card-body">
+                    <textarea style="font-family: 'Adobe Devanagari'; font-size: 30px; height: 200px;resize: none;width: 550px;border: none;word-wrap:break-word" th:text="'本站仅提供SSR的文件下载，文件来源于互联网，任何版权问题跟我没有屁关系'" disabled>
+                    </textarea>
+                </div>
+                <!--<div style="text-align: center">
+                    <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" download="">下载</a>
+                </div>-->
+                <ul class="layui-timeline">
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">SSR在线安装</h3>
+                            <p>
+                                点击按钮后会跳转自动安装
+                            </p>
+                            <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal"
+                               href="itms-services://?action=download-manifest&url=https://hyss.org/ssr-download/Shadowrocket.plist"
+                            target="_blank">点击安装</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="layui-col-md6" id="pcpage" style="display: none">
+            <div class="layui-card">
+                <div class="layui-card-header">下载PC SSR软件</div>
+                <div class="layui-card-body">
+                    <textarea  style="font-family: 'Adobe Devanagari'; font-size: 30px; height: 200px;resize: none;width: 550px;border: none;word-wrap:break-word" th:text="'本站仅提供SSR的文件下载，文件来源于互联网，任何版权问题跟我没有屁关系'" disabled>
+                    </textarea>
+                </div>
+                <!--<div style="text-align: center">
+                    <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" download="">下载</a>
+                </div>-->
+                <ul class="layui-timeline">
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">4.9.2修改版</h3>
+                            <p>
+                                目前PC SSR已停止更新，提供最后可用的版本
+                                <br>
+                            </p>
+                            <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" href="/Source/ShadowsocksR-win-4.9.2-tlanyan.zip" download="ShadowsocksR-win-4.9.2-tlanyan.zip">下载</a>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">4.9.2官方版</h3>
+                            <p>
+                                官方原版，Bug未知
+                            </p>
+                            <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" href="/Source/ShadowsocksR-win-4.9.2.zip" download="ShadowsocksR-win-4.9.2.zip" >官方版下载</a>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">官网下载</h3>
+                            <p>
+                                PC SSR的Github托管项目，为官方原版
+                            </p>
+                            <a class="file layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases" target="_blank">官网下载</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="layui-col-md6" id="none" style="display: none">
+            <div class="layui-card">
+                <div class="layui-card-header">下载PC SSR软件</div>
+                <div class="layui-card-body">
+                    <textarea  style="font-family: 'Adobe Devanagari'; font-size: 30px; height: 200px;resize: none;width: 550px;border: none;word-wrap:break-word" th:text="'就你，啥也不是'" disabled>
+                    </textarea>
+                </div>
+                </ul>
+
+            </div>
+
+        </div>
+</div>
+</body>
+<script>
+    $("#ad1").on("click", function () {
+        $('#adpage').show();
+        $('#extra').hide();
+        $('#idpage').hide();
+        $('#iPapage').hide();
+        $('#installpage').hide();
+        $('#pcpage').hide();
+        $('#none').hide();
+    });
+    $("#ad2").on("click", function () {
+        $('#adpage').hide();
+        $('#extra').show();
+        $('#idpage').hide();
+        $('#iPapage').hide();
+        $('#installpage').hide();
+        $('#pcpage').hide();
+        $('#none').hide();
+    });
+    $("#app1").on("click", function () {
+        $('#adpage').hide();
+        $('#extra').hide();
+        $('#idpage').show();
+        $('#iPapage').hide();
+        $('#installpage').hide();
+        $('#pcpage').hide();
+        $('#none').hide();
+    });
+    $("#app2").on("click", function () {
+        $('#adpage').hide();
+        $('#extra').hide();
+        $('#idpage').hide();
+        $('#iPapage').show();
+        $('#installpage').hide();
+        $('#pcpage').hide();
+        $('#none').hide();
+    });
+    $("#app3").on("click", function () {
+        $('#adpage').hide();
+        $('#extra').hide();
+        $('#idpage').hide();
+        $('#iPapage').hide();
+        $('#installpage').show();
+        $('#pcpage').hide();
+        $('#none').hide();
+    });
+    $("#pc1").on("click", function () {
+        $('#adpage').hide();
+        $('#extra').hide();
+        $('#idpage').hide();
+        $('#iPapage').hide();
+        $('#installpage').hide();
+        $('#pcpage').show();
+        $('#none').hide();
+    });
+    $("#no").on("click", function () {
+        $('#adpage').hide();
+        $('#extra').hide();
+        $('#idpage').hide();
+        $('#iPapage').hide();
+        $('#installpage').hide();
+        $('#pcpage').hide();
+        $('#none').show();
+    });
+
+
+
+
+
+
+
+    layui.use('element', function () {
+        var element = layui.element;
+    });
+    layui.use('layer', function () {
+        var layer = layui.layer;
+    });
+
+    $('#getpassword1').on('click', function () {
+        layer.prompt({
+            formType: 2,
+            title: '请输入：我使用后会退出账号',
+            area: ['200px', '100px'] //自定义文本域宽高
+        }, function(value, index, elem){
+            if (value === '我使用后会退出账号') {
+                layer.msg("干得不错");
+                $('#getpassword1').replaceWith('<p>' + 'Aneeo.com-851664' + '</p>');
+                layer.close(index);
+            } else {
+                layer.msg("你他吗在逗我？");
+            }
+
+        });
+    });
+    $('#getpassword2').on('click', function () {
+        layer.prompt({
+            formType: 2,
+            title: '请输入：我使用后会退出账号',
+            area: ['200px', '100px'] //自定义文本域宽高
+        }, function(value, index, elem){
+            if (value === '我使用后会退出账号') {
+                layer.msg("干得不错");
+                $('#getpassword2').replaceWith('<p>' + 'Aneeo.com-856744' + '</p>');
+                layer.close(index);
+            } else {
+                layer.msg("你他吗在逗我？");
+            }
+
+        });
+    });
+</script>
+
+</html>

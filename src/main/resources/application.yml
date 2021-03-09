@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+thymeleaf:
+  prefix: classpath:/templates/
+  suffix: .html
+  mode: HTML
+  encoding: UTF-8
+  servlet:
+    content-type: text/html
+  cache: false    #开发阶段关闭缓存
+  resource:
+    static-locations:classpath:/static/,calsspath:/templates/,classpath:/static/img/,classpath:/static/css/,classpath:/static/js/
